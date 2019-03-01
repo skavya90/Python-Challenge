@@ -41,9 +41,11 @@ with open(paragraph, 'r' ,encoding = "UTF-8") as file:
             # increase sentence count by 1for each sentence  
             sentence_count +=1
             
-
+#subtracts extra sentence which was counted due to split function
 sentence_count -= 1
+#Gets count of average letters
 avg_letter_count = statistics.mean(word_count)
+#Gets the average length of a sentence
 avg_sen_length = int(num_words) / sentence_count
 print("Paragraph Analysis")
 print("--------------------------------------")
