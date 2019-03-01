@@ -46,8 +46,8 @@ w.write("\n----------------------------------")
 for keys,values in dict_election.items():
     #calculates percentage of votes for each candidate
     vote_percent = ((values / len(voters)) * 100)
-    print(f"{keys}: ({round(vote_percent, 2)}%) {values}")           
-    w.write(f"\n{keys}: ({round(vote_percent, 2)}%) {values}")
+    print(f"{keys}: {format(vote_percent,'.3F')}% ({values})")           
+    w.write(f"\n{keys}: {format(vote_percent,'.3F')}% ({values})")
 print("----------------------------------") 
 w.write("\n----------------------------------")
 #Gets the key in dictionary with maximum number of votes
